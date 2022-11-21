@@ -1,14 +1,13 @@
 import { Post } from 'Api/services/Post'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import { GetPost } from 'Redux/Slices/Post/Post.Get'
 import { fetchPosts } from 'Redux/Slices/Post/Post.Thunk'
-import { useStore } from 'Redux/Store/Redux.hooks'
 import { store } from 'Redux/Store/store'
 import { ROUTES } from 'Routes/Routes'
 
 function Main() {
-	const { allPosts, error } = GetPost()
+	const { allPosts } = GetPost()
 
 	const createPost = () => {
 		Post.Create({ title: 'Title', competed: false })

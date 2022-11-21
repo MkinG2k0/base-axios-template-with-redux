@@ -1,4 +1,3 @@
-import { setStatus } from '@ReduxHelper'
 import { PayloadAction } from '@reduxjs/toolkit'
 
 import { PostModel } from './Post.Model'
